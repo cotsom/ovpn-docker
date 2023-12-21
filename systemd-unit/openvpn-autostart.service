@@ -1,0 +1,11 @@
+[Unit]
+Description=Auto start OpenVPN connection
+
+[Service]
+ExecStart=/usr/sbin/openvpn /path/to/your/vpnconfig
+Restart=always
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target
